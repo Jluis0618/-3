@@ -1,0 +1,686 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif; 
+    background: #F6F7D3;
+}
+
+/* fondo */
+
+.fondo{
+    background-color: #F6F7D3;
+    background-size: cover;
+    width: 100%;
+    height: 720px;
+}
+
+/*Titulo*/
+.text{
+ position: absolute; 
+ top: 35%;
+ left: 50%;
+transform: translate(-50%, -50%); 
+text-align: center;
+}
+
+.text h1{
+  font-size: 55px;
+  padding: 20px;
+  color: #333C4A;
+  border-bottom: 2px solid #333C4A;
+  border-top: 2px solid #333C4A;
+}
+
+.text p{
+    color: #333C4A;
+    font-size: 20px;
+    padding: 15px;
+}
+
+
+
+/* CARTA */
+.wrapper{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mail{
+    width: 340px;
+    height: 220px;
+    background-color: #495664;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: relative;
+    transform-style: preserve-3d;
+    cursor: pointer;
+
+}
+
+.mail::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-left: 170px solid transparent;
+    border-right: 170px solid #333C4A;
+    border-top: 130px solid transparent;
+    border-bottom: 130px solid #333C4A;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 5;
+}
+
+.mail::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 170px solid #495664;
+    border-bottom: 130px solid #495664;
+    border-right: 170px solid transparent;
+    border-top: 130px solid transparent;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 4;
+}
+
+.cover::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 170px solid transparent;
+    border-bottom: 130px solid transparent;
+    border-right: 170px solid transparent;
+    border-top: 130px solid #606b77;
+    z-index: 6;
+    transform-origin: top;
+    transform: rotateX(0deg);
+    transition: all .5s 1s ease;
+}
+
+.letter{
+    position: absolute;
+    z-index: 3;
+    top: 0px;
+    left: 10px;
+    background-color: #F8FCEB;
+    width: 320px;
+    height: 230px;
+    border-radius: 20px;
+    transition: all 1s ease;
+}
+
+.letter h1{
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #333C4A;
+    text-align: center;
+    
+}
+
+.mail:hover .cover::before{
+    transform: rotateX(180deg);
+    transition: all 1s ease;
+}
+
+.mail:hover .letter{
+    top: -80px;
+    transition: all .5s 1s ease;
+}
+
+/* Seccion de felicitacion */
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    background: #F8FCEB;
+}
+
+.mensaje, .img-content{
+    margin: 20px;
+}
+
+.mensaje{
+    width: 550px;
+    align-self: center;
+    border-bottom: 2px solid #495664;
+}
+
+.mensaje h2{
+    text-align: center;
+    font-size: 40px;
+    padding: 15px;
+    color: #495664;
+    border-bottom: 2px solid #495664;
+}
+
+.mensaje p{
+    font-size: 17px;
+    padding: 15px;
+}
+
+.img-content{
+    background-image: url(img/juntos.jpeg);
+    background-size: cover;
+    width: 550px;
+    height: 600px;
+    align-self: center;
+    border-radius: 10px;
+}
+
+/* Regalos */
+
+.content-regalos{
+    width: 100%;
+    height: 100%;
+    background: #606b77;
+}
+
+.title-regalos{
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.title-regalos h2{
+  font-size: 35px;
+  padding: 15px 0px;
+  color: #F8FCEB;
+  border-bottom: 2px solid #F8FCEB;
+}
+
+.regalos{
+    width: 100%;
+    height: 100%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.item-regalos{
+    width: 300px;
+    height: 320px;
+    background: #F6F7D3;
+    border-radius: 15px; 
+    margin: 30px;
+}
+
+.img-item1{
+    margin-top: 15px;
+}
+
+.img-item2{
+    margin-top: 20px;
+}
+
+.img-item1 img{
+    width: 140px;
+    display: block;
+    margin: 5px auto;
+}
+
+
+.img-item2 img{
+    width: 150px;
+    display: block;
+    margin: 10px auto;
+}
+
+.img-item3{
+    margin-top: 30px;
+}
+
+.img-item3 img{
+    width: 140px;
+    display: block;
+    margin: 5px auto;
+}
+
+
+.texts-item{
+    text-align: center;
+    margin: auto;
+}
+
+.texts-item h3{
+    padding: 10px;
+    font-size: 20px;
+    margin: 20px 0px;
+}
+
+.texts-item a{
+    text-decoration: none;
+    text-align: center;
+    background: #495664;
+    padding: 10px 20px;
+    color: #F8FCEB;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/*Gallery*/
+
+.content-gallery{
+    width: 100%;
+    height: 100%;
+    background: #F6F7D3;
+}
+
+.title-gallery{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-gallery h2{
+    font-size: 35px;
+    padding: 15px 0px;
+    color: #495664;
+    border-bottom: 2px solid #495664;
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px auto;
+    width: 80%;
+}
+
+
+.img-gallery{
+    margin: 10px;
+}
+
+.img-gallery img{
+   width: 250px;
+}
+
+/* Versiculos */
+
+.content-versiculos{
+    width: 100%;
+    height: 100%;
+    background-color: #606b77;
+}
+
+.title-versiculos{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-versiculos h2{
+    font-size: 35px;
+    padding: 15px 0px;
+    color: #F8FCEB;
+    border-bottom: 2px solid #F8FCEB;
+}
+
+.versiculos{
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item-versiculos{
+    margin: 10px;
+    padding: 20px;
+    width: 350px;
+    height: 160px;
+    position: relative;
+    top: 0;
+    left: 0;
+    border-radius: 15px;
+    background-color: #F6F7D3;
+    transition: all 1s ease;
+}
+
+.item-versiculos:hover{
+    top: -10px;
+    box-shadow: 0px 15px 2px 0px rgba(0, 0, 0, 0.267);
+}
+
+.largo{
+    height: 240px;
+}
+
+.title-item h3{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+/*Dedicatoria de peliculas*/
+
+.content-peliculas{
+    width: 100%;
+    height: 100%;
+    background-color: #F6F7D3;
+}
+
+.title-peliculas{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-peliculas h2{
+    font-size: 35px;
+    padding: 15px 0px;
+    color: #495664;
+    border-bottom: 2px solid #495664;
+}
+
+.peliculas{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item-peliculas{
+    width: 300px;
+    position: relative;
+    margin: 15px;
+  }
+  
+
+
+  .peliculas img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #495664c2;
+    width: 100%;
+    height: 0%;
+    transition: 1s ease;
+    overflow: hidden;
+  }
+  
+.item-peliculas:hover .overlay{
+    height: 100%;
+    cursor: pointer;
+  }
+  
+  
+  .overlay h2{
+    color: #F6F7D3;
+    font-size: 22px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+  
+  .overlay p{
+    color: #F6F7D3;
+    font-size: 15px;
+    position: relative;
+    top: 55%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -20%);
+  }
+
+  /*Musica*/
+
+  .content-musica{
+    width: 100%;
+    height: 100%;
+    background-color: #495664;
+  }
+
+  .musica{
+      width: 95%;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
+  .title-musica{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+   .title-musica h2{
+    font-size: 35px;
+    padding: 10px 0px;
+    color: #F8FCEB;
+    border-bottom: 2px solid #F6F7D3;
+   }
+
+  .item-musica{
+    width: 400px;
+    height: 200px;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #F6F7D3;
+    display: flex;
+   }
+
+  .music__texts{
+   margin: 10px auto;
+   padding: 10px;
+   text-align: center;
+   color: #606b77;
+   align-self: center;
+  }
+
+.music__texts h2{
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.music__texts h3{
+    margin-top: 10px;
+    font-weight: 200;
+    font-size: 14px;
+}
+
+.music__img{
+    align-self: center;
+}
+
+.music__img img{
+   width: 150px;
+   align-self: center;
+}
+
+.audio{
+    display: none;
+}
+
+.music__controls{
+    margin: auto;
+    text-align: center;
+}
+
+.music__btn i{
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    color: #F6F7D3;
+    background: #495664;
+    margin-top: 20px;
+}
+
+.music__btn .hide{
+    display: none;
+}
+
+
+@media screen and (max-width: 415px) {
+ 
+     .text{
+        top: 35%;
+    }
+
+    .text h1{
+       font-size: 35px;
+    }
+
+    .text p{
+        font-size: 18px;
+    }
+
+    .wrapper{
+        top: 65%;
+    }
+
+    .mail{
+        width: 300px;
+        height: 150px;
+    }
+ 
+    .mail::before{
+        border-left: 150px solid transparent;
+        border-right: 150px solid #333C4A;
+        border-top: 100px solid transparent;
+        border-bottom: 100px solid #333C4A;
+    }
+
+    .mail::after{
+        border-left: 150px solid #495664;
+        border-bottom: 100px solid #495664;
+        border-right: 150px solid transparent;
+        border-top: 100px solid transparent;
+    }
+
+    .cover::before{
+        border-left: 150px solid transparent;
+        border-bottom: 100px solid transparent;
+        border-right: 150px solid transparent;
+        border-top: 100px solid #606b77;
+    }
+
+    .letter{
+        left: 20px;
+        width: 260px;
+        height: 200px;
+    }
+
+    .letter h1{
+        width: 300px;
+        font-size: 25px;
+        
+    }
+
+    /*Felicidade*/
+
+   .content{
+    height: 1400px;
+   }
+
+   .mensaje, .img-content{
+    margin: 0px 20px;
+   }
+
+   .mensaje{
+    width: 100%;
+   }
+
+   .mensaje h2{
+       font-size: 35px;
+       
+   }
+
+   .img-content{
+    background-image: url(img/juntos.jpeg);
+    background-size: cover;
+    width: 90%;
+    height: 500px;
+    border-radius: 10px;
+   }
+
+   /*Regalos*/
+
+   .content-regalos{
+    height: 80%;
+   }
+
+   .title-regalos{
+    height: 160px;
+    margin-bottom: 0;
+   }
+
+   .title-regalos h2{
+    font-size: 30px;
+    text-align: center;
+   }
+
+   .regalos{
+    height: 100%;   
+   }
+
+   .item-regalos{
+    width: 80%;
+    margin: 15px 20px;
+   }
+
+
+   .texts-item a{
+  padding: 10px 30px;
+   } 
+   
+
+   /* Gallery */
+   .title-gallery h2{
+    font-size: 30px;
+    
+   } 
+
+   .content-gallery{
+    height: 100%;
+   } 
+   
+   .title-versiculos h2{
+    font-size: 27px;
+    margin: 0;
+    text-align: center;
+    padding: 10px 0px;
+    color: #F8FCEB;
+   }
+
+
+   .item-versiculos{
+    margin: 10px;
+    width: 100%;
+    height: 100%;
+   }
+}
+
